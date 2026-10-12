@@ -1,17 +1,12 @@
 package org.example.aula3;
-
 import java.util.Scanner;
 
-/*public class Animais {
-    String nome;
+public class Animais {
     String cor;
     int idade;
     double peso;
     boolean castrado;
-}*/
-public class Animais {
     public static void main(String[] args) {
-
         Scanner coisinha = new Scanner(System.in);
         String nome;
 

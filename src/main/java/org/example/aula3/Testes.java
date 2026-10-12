@@ -1,10 +1,11 @@
 
 package org.example.aula3;
+import org.example.aula3.Animais;
 
 public class Testes{
-    static void main() {
+    public static void main(String[] args) {
         Animais gato = new Animais();
-        gato.idade =2;
+
         System.out.println(gato.idade);
     }
 }
