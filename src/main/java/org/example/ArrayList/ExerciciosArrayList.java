@@ -1,16 +1,17 @@
+package org.example.ArrayList;
+
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
 
-class Main {
+class ExerciciosArrayList {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-// Crie uma lista vazia de nomes. Adicione três nomes e imprima a lista inteira.
-        /*ArrayList<String> lista = new ArrayList<String>();
+            //Crie uma lista vazia de nomes. Adicione três nomes e imprima a lista inteira.
+        ArrayList<String> lista = new ArrayList<String>();
         lista.add("Carla");
         lista.add("Maria");
         lista.add("Patricia");
-        System.out.println(lista);*/
+        System.out.println(lista);
 
 //- Crie uma lista já preenchida com quatro frutas. Imprima a primeira, a última e quantas frutas tem.
        /* ArrayList<String> frutas = new ArrayList<>(
