@@ -1,25 +1,47 @@
 package org.example.metodos;
+
+import java.util.Scanner;
+
 public class MetodosJava {
 
     public static void main(String[] args) {
 
-        // Exercício 1
-        mostrarBoasVindas();
+        Scanner input = new Scanner(System.in);
+
+        //1 — Na mesma classe do main, crie um metodo chamado mostrarBoasVindas() que imprime "Bem-vinda ao curso de Java!". Chame ele no main.
+        Utilidades.mostrarBoasVindas();
 
         // Exercício 2
         Utilidades.saudar("Ana");
+        Utilidades.saudar("Carlos");
         Utilidades.saudar("Maria");
-        Utilidades.saudar("Caio");
-    }
 
-    public static void mostrarBoasVindas() {
-        System.out.println("Bem-vinda ao curso de Java!");
+        // Exercício 3
+        int resultado = Utilidades.dobro(5);
+        System.out.println("Dobro: " + resultado);
+
+        // Exercício 4
+        System.out.print("Digite a primeira nota: ");
+        double n1 = input.nextDouble();
+
+        System.out.print("Digite a segunda nota: ");
+        double n2 = input.nextDouble();
+
+        double media = Utilidades.calcularMedia(n1, n2);
+        System.out.printf("Média: %.2f%n", media);
+
+        // Exercício 5
+        System.out.print("Digite a idade: ");
+        int idade = input.nextInt();
+
+        if (Utilidades.ehMaiorDeIdade(idade)) {
+            System.out.println("Maior de idade");
+        } else {
+            System.out.println("Menor de idade");
+        }
+
+        input.close();
     }
 }
 
-class Utilidades {
 
-    public static void saudar(String nome) {
-        System.out.println("Olá, " + nome + "! Tudo bem?");
-    }
-}
