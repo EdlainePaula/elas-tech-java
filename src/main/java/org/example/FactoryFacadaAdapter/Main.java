@@ -1,10 +1,10 @@
 package org.example.FactoryFacadaAdapter;
 
-public class TestesExercicios {
+public class Main {
     public static void main(String[] args) {
-        System.out.print("Testes dissertavivos e práticos: Factory, Facade e Adaptor:");
+        System.out.print("Testes dissertavivos e práticos: Factory, Facade e Adaptor:\n");
         System.out.print("Questão 1. Explique com suas palavras qual problema o Factory resolve.\n O que aconteceria se os ifs que decidem qual objeto criar ficassem espalhados pelo main e por outras partes do programa, e depois surgisse um tipo novo?\n"
-        + "Resposta: O Factory serve para centralizar a criação de objetos, evitando que fiquem espalhados pelo programa. Se os ifs estivessem distribuídos pelo main e por outras classes, a inclusão de um novo tipo exigiria alterações em vários pontos do código"
+        + "Resposta: O Factory serve para centralizar a criação de objetos, evitando que fiquem espalhados pelo programa. Se os ifs estivessem distribuídos pelo main e por outras classes, a inclusão de um novo tipo exigiria alterações em vários pontos do código\n"
         );
 
         System.out.println("Questão 2: O método da fábrica normalmente devolve o objeto criado com qual tipo?\n" +
@@ -45,7 +45,36 @@ No main, use a fábrica para criar um cachorro e um gato e chame emitirSom() nos
                 "• a) Na classe de fora\n" +
                 "• b) Na interface\n" +
                 "\u001B[31mc) No método implementado da interface, dentro do adapter \n" +
-                "\u001B[0md) No main, antes de chamar o método");
+                "\u001B[0md) No main, antes de chamar o método\n");
+
+
+
+        //Exercicio 6>
+        Pagamento pagamento = new PayPalAdapter();
+        pagamento.pagar();
+
+        System.out.println("Facade\n" +
+                "\n" +
+                "Questão 7. Explique com suas palavras qual problema o Facade resolve. Se quiser, use o exemplo do síndico do condomínio ou crie outro.:\n" +
+                "" +
+                "Resposta: Facade oferece uma interface únida que esconde toda a complexidade dos subsistemas usados naquela aplicação. Todo o funcionamento por trás de um clique do úsuario pode ser resumido pelo Facade, sem a necessidade de que ele veja todo o processo acontecer"
+        );
+
+        System.out.println("Questão 8. Marque V (verdadeiro) ou F (falso):\n"
+            + "• (F) A fachada precisa implementar uma interface.\n" +
+                "Facade não precisa de um contrato com Interface, ela é uma classe que reúne um conjunto de funcionalidades\n"
+            + "• (F ) A fachada guarda as classes envolvidas no processo em atributos.\n" +
+                "Facade pode guardar classes em atributos, mas não é uma obrigação do padrão.Pode trabalhar somente com objetos ou métodos\n"
+            + "• (F ) Depois que a fachada existe, é proibido usar as outras classes diretamente.\n" +
+                "Facade facilita o acesso mas não proíbe que essas classes sejam acessadas por outras\n"
+        );
+
+
+        //Exercicio 9 MinhaFacade:
+        ManhaFacade minhaManha = new ManhaFacade();
+
+        minhaManha.acordar();
+
     }
 
 }
