@@ -1,4 +1,9 @@
 package org.example.Decorator;
 
-public class AcaiDecorator {
+public abstract class AcaiDecorator implements Acai {
+    protected Acai acaiEmbrulhado;
+
+    public AcaiDecorator(Acai acai) {
+        this.acaiEmbrulhado = acai;
+    }
 }
